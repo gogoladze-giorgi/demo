@@ -1,8 +1,12 @@
 // import classes from './DataOfValutebi.module.css'
-import React from 'react'
+import React, {Fragment} from 'react'
+
 const DataOfValutebi =(props)=> {
-    return <li>
-        <div>{props.name}</div>
-    </li>
+    console.log( props.ratesOfUSD)
+    return <Fragment>
+    {props.ratesOfUSD.map((valueOfUSD)=>(
+           <li> {valueOfUSD.timestamp}</li>
+        ))}
+    </Fragment>
 }
 export default DataOfValutebi;
